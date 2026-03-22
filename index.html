@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Rodomacambira Transportes | Areia, Pedra, Calcário e Fretes</title>
+    <meta name="description" content="Rodomacambira Transportes: Transporte de cargas e venda de insumos para sua obra (areia, pedra, calcário, adubo e concreto). Contrate apenas o frete ou o produto completo. Atendimento Nacional a partir de Presidente Prudente - SP. ☎ (18) 99721-2541">
+    <meta name="keywords" content="transporte de cargas, venda de insumos, rodomacambira transportes, frete, areia, pedra brita, calcário, adubo, concreto, transportadora presidente prudente, frete nacional, logística">
+    <meta name="author" content="Rodomacambira Transportes">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="Portuguese">
+    
+    <meta name="geo.region" content="BR-SP">
+    <meta name="geo.placename" content="Presidente Prudente">
+    <meta name="geo.position" content="-22.125;-51.388">
+    <meta name="ICBM" content="-22.125, -51.388">
+    
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Rodomacambira Transportes | Logística e Insumos">
+    <meta property="og:description" content="Transporte de cargas e venda de insumos para sua obra. Compre o produto ou contrate apenas o frete com nossos veículos. Atendimento Nacional.">
+    <meta property="og:image" content="imagens/logo.png">
+    <meta property="og:locale" content="pt_BR">
+    <meta property="og:site_name" content="Rodomacambira Transportes">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        /* --- Reset e Variáveis --- */
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+
+        :root {
+            --bg-dark: #121212;
+            --bg-card: #1e1e1e;
+            --red-brand: #b81d18;
+            --orange-brand: #f37021;
+            --text-light: #f5f5f5;
+            --text-muted: #a0a0a0;
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-light);
+            line-height: 1.6;
+            padding-bottom: 60px;
+        }
+
+        /* --- Tipografia --- */
+        h1, h2, h3 { color: var(--text-light); }
+        .highlight { color: var(--orange-brand); }
+        
+        .section-title {
+            text-align: center;
+            font-size: 2rem;
+            text-transform: uppercase;
+            font-weight: 900;
+            margin-bottom: 40px;
+            letter-spacing: 1px;
+        }
+        .section-title span { color: var(--red-brand); }
+
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+
+        /* --- Navbar --- */
+        header {
+            background-color: rgba(18, 18, 18, 0.98); /* Fundo Preto */
+            border-bottom: 3px solid var(--red-brand);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            height: 80px; /* Altura fixa para não crescer com a logo */
+            transition: top 0.3s ease-in-out; /* Transição para o JS mobile */
+        }
+        .nav-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 100%;
+            position: relative;
+        }
+        
+        /* Ajuste da Logo: Maior e Vázando */
+        .logo { 
+            position: absolute;
+            left: 20px;
+            top: -10px; /* Sobe a logo para mais perto do topo */
+            height: 120px; /* Mantém o tamanho atual */
+            z-index: 101;
+            filter: drop-shadow(0 4px 8px rgba(0,0,0,0.6));
+        }
+
+        .btn-nav-zap {
+            margin-left: auto; /* Empurra o botão para a direita */
+            background: linear-gradient(45deg, var(--red-brand), var(--orange-brand));
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: 0.3s;
+        }
+        .btn-nav-zap:hover { opacity: 0.8; transform: scale(1.05); }
+
+        /* --- Hero Section & Formulário Horizontal --- */
+        .hero {
+            padding: 80px 0 60px 0;
+            background: linear-gradient(rgba(18, 18, 18, 0.85), rgba(18, 18, 18, 0.95)), url('imagens/frota.jpg') center/cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .hero-form-box {
+            background: rgba(30, 30, 30, 0.85);
+            backdrop-filter: blur(5px);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.8);
+            width: 100%;
+            border-top: 4px solid var(--orange-brand);
+        }
+        
+        .hero-form-box h1 {
+            text-align: center;
+            font-size: 1.8rem;
+            margin-bottom: 5px;
+            text-transform: uppercase;
+        }
+        .hero-form-box p {
+            text-align: center;
+            color: var(--text-muted);
+            margin-bottom: 25px;
+        }
+
+        /* Grid Horizontal (Deitado) */
+        .form-grid-horizontal {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+            align-items: end;
+        }
+
+        .col-span-1 { grid-column: span 1; }
+        .col-span-2 { grid-column: span 2; }
+        .col-span-3 { grid-column: span 3; }
+
+        .form-group { width: 100%; margin-bottom: 0; }
+        .form-group label { display: block; margin-bottom: 6px; font-size: 0.85rem; color: var(--text-muted); text-transform: uppercase; font-weight: 700; }
+        .form-group input, .form-group select {
+            width: 100%; padding: 12px; background: #222; border: 1px solid #444; border-radius: 5px; color: #fff; font-size: 0.95rem; outline: none; transition: 0.3s; height: 48px;
+        }
+        .form-group input:focus, .form-group select:focus { border-color: var(--orange-brand); }
+
+        .btn-submit {
+            width: 100%; height: 48px; background: var(--red-brand); color: white; border: none; border-radius: 5px; font-size: 1.1rem; font-weight: bold; text-transform: uppercase; cursor: pointer; transition: 0.3s; display: flex; justify-content: center; align-items: center; gap: 8px;
+        }
+        .btn-submit:hover { background: var(--orange-brand); transform: translateY(-2px); }
+
+        /* --- Grid de Produtos --- */
+        .produtos-section { padding: 80px 0; }
+        .grid-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+        }
+        .card {
+            background-color: var(--bg-card);
+            border-radius: 8px;
+            overflow: hidden;
+            border-bottom: 4px solid var(--red-brand);
+            transition: 0.3s;
+        }
+        .card:hover { transform: translateY(-5px); border-bottom-color: var(--orange-brand); box-shadow: 0 10px 20px rgba(0,0,0,0.5); }
+        .card-img { height: 200px; background-size: cover; background-position: center; }
+        .card-content { padding: 20px; text-align: center; }
+        .card-content h3 { margin-bottom: 10px; font-size: 1.3rem; text-transform: uppercase; }
+
+        /* Mapeamento das Imagens dos Cards */
+        .img-areia { background-image: url('imagens/areia.png'); }
+        .img-pedra { background-image: url('imagens/pedra.png'); }
+        .img-calcario { background-image: url('imagens/calcario.jpg'); }
+        .img-adubo { background-image: url('imagens/adubo.png'); }
+        .img-concreto { background-image: url('imagens/concreto.png'); }
+        .img-frete { background-image: url('imagens/frete.jpg'); }
+
+        /* --- Seção de Contato (Rodapé) --- */
+        .contato-section { padding: 60px 0; background-color: #161616; border-top: 1px solid #333; border-bottom: 1px solid #333; }
+        .contato-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; text-align: center; }
+        .contact-box i { font-size: 2.5rem; color: var(--orange-brand); margin-bottom: 15px; }
+        .contact-box h4 { font-size: 1.2rem; margin-bottom: 10px; text-transform: uppercase; color: var(--text-light); }
+        .contact-box p, .contact-box a { color: var(--text-muted); text-decoration: none; font-size: 1rem; transition: 0.3s; }
+        .contact-box a:hover { color: var(--red-brand); }
+
+        /* --- Footer --- */
+        footer { padding: 30px 0; text-align: center; color: var(--text-muted); font-size: 0.9rem; }
+        footer a { color: var(--orange-brand); text-decoration: none; }
+
+        /* --- WhatsApp Flutuante --- */
+        .zap-float {
+            position: fixed; bottom: 30px; right: 30px; background: #25d366; color: white; width: 60px; height: 60px; border-radius: 50%; display: flex; justify-content: center; align-items: center; font-size: 35px; box-shadow: 0 5px 15px rgba(0,0,0,0.3); z-index: 999; text-decoration: none; animation: float 3s ease-in-out infinite;
+        }
+        @keyframes float { 0% { transform: translateY(0); } 50% { transform: translateY(-10px); } 100% { transform: translateY(0); } }
+
+        /* --- Responsivo --- */
+        @media (max-width: 900px) {
+            .form-grid-horizontal { grid-template-columns: repeat(2, 1fr); }
+            .col-span-3, .col-span-2 { grid-column: span 2; }
+            .logo { height: 100px; left: 10px; }
+        }
+
+        @media (max-width: 600px) {
+            .form-grid-horizontal { grid-template-columns: 1fr; }
+            .col-span-3, .col-span-2, .col-span-1 { grid-column: span 1; }
+            .logo { height: 90px; top: 10px;}
+            .btn-nav-zap span { display: none; } /* Oculta texto no mobile para caber com a logo grande */
+            .btn-nav-zap { padding: 10px; }
+            .hero { padding-top: 40px; }
+        }
+    </style>
+</head>
+<body>
+
+    <a href="javascript:void(0);" onclick="abrirZap('18997212541', 'Olá! Acessei o site e gostaria de tirar uma dúvida.')" class="zap-float">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <header id="main-header">
+        <div class="container nav-content">
+            <img src="imagens/logo.png" alt="Rodomacambira Transportes" class="logo">
+            <a href="#formulario-topo" class="btn-nav-zap">
+                <i class="fas fa-clipboard-list"></i> <span>Fazer Cotação</span>
+            </a>
+        </div>
+    </header>
+
+    <section class="hero" id="formulario-topo">
+        <div class="container">
+            <div class="hero-form-box">
+                <h1>Faça sua Cotação</h1>
+                <p>Preencha os dados abaixo para agilizarmos seu orçamento em todo o Brasil.</p>
+                
+                <form onsubmit="event.preventDefault(); enviarOrcamento();" class="form-grid-horizontal">
+                    
+                    <div class="form-group col-span-2">
+                        <label>Nome / Empresa</label>
+                        <input type="text" id="form-nome" required placeholder="Seu nome ou Razão Social">
+                    </div>
+                    
+                    <div class="form-group col-span-1">
+                        <label>O que você precisa?</label>
+                        <select id="form-servico" required>
+                            <option value="" disabled selected>Selecione...</option>
+                            <option value="Apenas Frete (Transporte)">Apenas Frete</option>
+                            <option value="Comprar Insumo + Frete">Insumo + Frete</option>
+                            <option value="Apenas Comprar Insumo (Sem Frete)">Apenas Insumo</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group col-span-1">
+                        <label>Qual produto?</label>
+                        <select id="form-produto">
+                            <option value="Nenhum (Só frete)">Nenhum (Só frete)</option>
+                            <option value="Areia">Areia</option>
+                            <option value="Pedra">Pedra</option>
+                            <option value="Calcário">Calcário</option>
+                            <option value="Adubo">Adubo</option>
+                            <option value="Concreto">Concreto</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group col-span-2">
+                        <label>Origem (Onde Coletar)</label>
+                        <input type="text" id="form-origem" placeholder="Cidade ou Endereço">
+                    </div>
+
+                    <div class="form-group col-span-2">
+                        <label>Destino (Onde Entregar)</label>
+                        <input type="text" id="form-destino" placeholder="Cidade ou Endereço">
+                    </div>
+
+                    <div class="form-group col-span-3">
+                        <label>Detalhes Adicionais / Quantidade</label>
+                        <input type="text" id="form-detalhes" placeholder="Ex: 2 caminhões de areia, informar tonelagem, etc...">
+                    </div>
+
+                    <button type="submit" class="btn-submit col-span-1">
+                        <i class="fab fa-whatsapp"></i> Enviar
+                    </button>
+
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <section class="produtos-section container">
+        <h2 class="section-title">O que <span>Oferecemos</span></h2>
+        <div class="grid-cards">
+            
+            <div class="card">
+                <div class="card-img img-areia"></div>
+                <div class="card-content">
+                    <h3>Areia</h3>
+                    <p>Qualidade garantida para sua construção.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-img img-pedra"></div>
+                <div class="card-content">
+                    <h3>Pedra</h3>
+                    <p>Diversas granulometrias para sua obra.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-img img-calcario"></div>
+                <div class="card-content">
+                    <h3>Calcário</h3>
+                    <p>Correção e preparo ideal para o solo.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-img img-adubo"></div>
+                <div class="card-content">
+                    <h3>Adubo</h3>
+                    <p>Nutrição essencial para o agronegócio.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-img img-concreto"></div>
+                <div class="card-content">
+                    <h3>Concreto</h3>
+                    <p>Resistência e durabilidade sob medida.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-img img-frete"></div>
+                <div class="card-content">
+                    <h3>Apenas Frete</h3>
+                    <p>Possuímos veículos que carregam uma diversidade enorme de cargas.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="contato-section">
+        <div class="container contato-grid">
+            <div class="contact-box">
+                <i class="fab fa-whatsapp"></i>
+                <h4>Atendimento Principal</h4>
+                <a href="javascript:void(0);" onclick="abrirZap('18997212541', 'Olá, vim pelo site!')">(18) 99721-2541</a>
+            </div>
+            
+            <div class="contact-box">
+                <i class="fab fa-whatsapp"></i>
+                <h4>Atendimento Secundário</h4>
+                <a href="javascript:void(0);" onclick="abrirZap('18997699734', 'Olá, vim pelo site!')">(18) 99769-9734</a>
+            </div>
+
+            <div class="contact-box">
+                <i class="fas fa-map-marker-alt"></i>
+                <h4>Localização</h4>
+                <p>Presidente Prudente - SP<br><em>(Atendimento Nacional)</em></p>
+            </div>
+
+            <div class="contact-box">
+                <i class="fas fa-truck-loading"></i>
+                <h4>Versatilidade</h4>
+                <p>Entregamos o produto, fazemos apenas o frete ou vendemos direto para você.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Rodomacambira Transportes. Todos os direitos reservados.</p>
+            <p style="margin-top: 5px;">Desenvolvido por <a href="https://www.devdigitalbr.com.br" target="_blank">Dev Digital BR</a></p>
+        </div>
+    </footer>
+
+    <script>
+        // Função do WhatsApp
+        function abrirZap(numero, texto) {
+            const url = `https://wa.me/55${numero}?text=${encodeURIComponent(texto)}`;
+            window.open(url, '_blank');
+        }
+
+        // Envio do Formulário
+        function enviarOrcamento() {
+            const nome = document.getElementById('form-nome').value;
+            const servico = document.getElementById('form-servico').value;
+            const produto = document.getElementById('form-produto').value;
+            const origem = document.getElementById('form-origem').value || 'Não informado';
+            const destino = document.getElementById('form-destino').value || 'Não informado';
+            const detalhes = document.getElementById('form-detalhes').value || 'Não informado';
+
+            const mensagem = `*🚛 NOVA SOLICITAÇÃO - RODOMACAMBIRA*\n\n` +
+                             `*Cliente:* ${nome}\n` +
+                             `*O que precisa:* ${servico}\n` +
+                             `*Produto:* ${produto}\n` +
+                             `*Origem:* ${origem}\n` +
+                             `*Destino:* ${destino}\n\n` +
+                             `*Detalhes:* ${detalhes}\n\n` +
+                             `Gostaria de um orçamento!`;
+
+            abrirZap('18997212541', mensagem);
+        }
+
+        // Lógica do Menu sumir ao rolar para baixo no Mobile
+        let ultimoScroll = 0;
+        const header = document.getElementById('main-header');
+
+        window.addEventListener('scroll', () => {
+            // Só executa o código se a tela for menor que 768px (Mobile/Tablet)
+            if (window.innerWidth <= 768) {
+                let atualScroll = window.pageYOffset || document.documentElement.scrollTop;
+                
+                // Se rolou para baixo e já passou do tamanho do header (80px)
+                if (atualScroll > ultimoScroll && atualScroll > 80) {
+                    header.style.top = "-100px"; // Esconde jogando para cima
+                } else {
+                    header.style.top = "0"; // Mostra novamente ao rolar para cima
+                }
+                
+                ultimoScroll = atualScroll <= 0 ? 0 : atualScroll; // Evita valores negativos
+            } else {
+                header.style.top = "0"; // Garante que no Desktop sempre apareça
+            }
+        });
+    </script>
+
+</body>
+</html>
