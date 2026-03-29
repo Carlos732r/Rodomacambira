@@ -1,12 +1,56 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <title>Rodomacambira Transportes | Cotação de Fretes e Insumos</title>
-    <meta name="description" content="Rodomacambira Transportes: Transporte de cargas e venda de insumos para sua obra. Faça sua cotação rápida. Atendimento Nacional a partir de Presidente Prudente - SP. ☎ (18) 99721-2541">
+    <title>Rodomacambira Transportes | Fretes e Venda de Insumos (Areia, Pedra, Calcário)</title>
+    <meta name="description" content="Especialistas em transporte logístico e venda de insumos (areia, pedra, calcário, adubo e concreto). Atendimento nacional a partir de Presidente Prudente - SP. Solicite sua cotação rápida!">
+    <meta name="keywords" content="transportadora presidente prudente, transporte de cargas, frete nacional, cotação de frete, venda de areia, venda de pedra brita, calcário agrícola, adubo, concreto, logística, rodomacambira">
+    <meta name="author" content="Rodomacambira Transportes">
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <link rel="canonical" href="https://www.seudominio.com.br/"> <meta name="geo.region" content="BR-SP">
+    <meta name="geo.placename" content="Presidente Prudente">
+    <meta name="geo.position" content="-22.1255;-51.3889">
+    <meta name="ICBM" content="-22.1255, -51.3889">
+
+    <meta property="og:locale" content="pt_BR">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Rodomacambira Transportes | Soluções em Logística e Insumos">
+    <meta property="og:description" content="Transporte de cargas e venda de insumos para sua obra ou agronegócio. Peça seu orçamento online agora mesmo.">
+    <meta property="og:url" content="https://www.seudominio.com.br/"> <meta property="og:site_name" content="Rodomacambira Transportes">
+    <meta property="og:image" content="https://www.seudominio.com.br/imagens/logo.png"> <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Rodomacambira Transportes | Cotação Rápida">
+    <meta name="twitter:description" content="Especialistas em transporte logístico e venda de insumos no Brasil.">
+    <meta name="twitter:image" content="https://www.seudominio.com.br/imagens/logo.png">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Rodomacambira Transportes",
+      "image": "https://www.seudominio.com.br/imagens/logo.png",
+      "@id": "https://www.seudominio.com.br/",
+      "url": "https://www.seudominio.com.br/",
+      "telephone": "+5518997212541",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Presidente Prudente",
+        "addressRegion": "SP",
+        "addressCountry": "BR"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -22.1255,
+        "longitude": -51.3889
+      },
+      "description": "Empresa especializada em transporte de cargas e venda de insumos como areia, pedra, calcário, adubo e concreto. Atendimento em todo o território nacional.",
+      "priceRange": "$$"
+    }
+    </script>
     
+    <link rel="icon" type="image/png" href="imagens/logo.png">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700;900&display=swap" rel="stylesheet">
@@ -256,14 +300,14 @@
 </head>
 <body>
 
-    <a href="javascript:void(0);" onclick="abrirZap('18997212541', 'Olá! Acessei o site e gostaria de tirar uma dúvida.')" class="zap-float">
+    <a href="javascript:void(0);" onclick="abrirZap('18997212541', 'Olá! Acessei o site e gostaria de tirar uma dúvida.')" class="zap-float" aria-label="Fale conosco pelo WhatsApp">
         <i class="fab fa-whatsapp"></i>
     </a>
 
     <header>
         <div class="container nav-content">
-            <img src="imagens/logo.png" alt="Rodomacambira Transportes" class="logo">
-            <a href="javascript:void(0);" onclick="abrirZap('18997212541', 'Olá, gostaria de fazer uma cotação.')" class="btn-nav-zap">
+            <img src="imagens/logo.png" alt="Logotipo Rodomacambira Transportes" class="logo">
+            <a href="javascript:void(0);" onclick="abrirZap('18997212541', 'Olá, gostaria de fazer uma cotação.')" class="btn-nav-zap" aria-label="Solicitar Cotação via WhatsApp">
                 <i class="fab fa-whatsapp"></i> <span>Falar no WhatsApp</span>
             </a>
         </div>
@@ -272,19 +316,19 @@
     <main class="main-content">
         <div class="container">
             
-            <div class="hero-form-box">
-                <h1>Faça sua Cotação</h1>
+            <section class="hero-form-box" aria-labelledby="form-title">
+                <h1 id="form-title">Faça sua Cotação</h1>
                 <p>Preencha os dados abaixo para agilizarmos seu orçamento em todo o Brasil.</p>
                 
                 <form onsubmit="event.preventDefault(); enviarOrcamento();" class="form-grid-horizontal">
                     
                     <div class="form-group col-span-2">
-                        <label>Nome / Empresa</label>
+                        <label for="form-nome">Nome / Empresa</label>
                         <input type="text" id="form-nome" required placeholder="Seu nome ou Razão Social">
                     </div>
                     
                     <div class="form-group col-span-1">
-                        <label>O que você precisa?</label>
+                        <label for="form-servico">O que você precisa?</label>
                         <select id="form-servico" required>
                             <option value="" disabled selected>Selecione...</option>
                             <option value="Apenas Frete (Transporte)">Apenas Frete</option>
@@ -294,7 +338,7 @@
                     </div>
 
                     <div class="form-group col-span-1">
-                        <label>Qual produto?</label>
+                        <label for="form-produto">Qual produto?</label>
                         <select id="form-produto">
                             <option value="Nenhum (Só frete)">Nenhum (Só frete)</option>
                             <option value="Areia">Areia</option>
@@ -306,61 +350,61 @@
                     </div>
 
                     <div class="form-group col-span-2">
-                        <label>Origem (Onde Coletar)</label>
+                        <label for="form-origem">Origem (Onde Coletar)</label>
                         <input type="text" id="form-origem" placeholder="Cidade ou Endereço">
                     </div>
 
                     <div class="form-group col-span-2">
-                        <label>Destino (Onde Entregar)</label>
+                        <label for="form-destino">Destino (Onde Entregar)</label>
                         <input type="text" id="form-destino" placeholder="Cidade ou Endereço">
                     </div>
 
                     <div class="form-group col-span-3">
-                        <label>Detalhes Adicionais / Quantidade</label>
+                        <label for="form-detalhes">Detalhes Adicionais / Quantidade</label>
                         <input type="text" id="form-detalhes" placeholder="Ex: 2 caminhões de areia, tonelagem, etc...">
                     </div>
 
-                    <button type="submit" class="btn-submit col-span-1">
+                    <button type="submit" class="btn-submit col-span-1" aria-label="Enviar Pedido via WhatsApp">
                         <i class="fab fa-whatsapp"></i> Enviar Pedido
                     </button>
 
                 </form>
-            </div>
+            </section>
 
-            <div class="contato-bloco">
+            <section class="contato-bloco" aria-label="Informações de Contato e Localização">
                 <div class="contato-grid">
-                    <div class="contact-box">
-                        <i class="fab fa-whatsapp"></i>
+                    <address class="contact-box" style="font-style: normal;">
+                        <i class="fab fa-whatsapp" aria-hidden="true"></i>
                         <h4>Atendimento Principal</h4>
                         <a href="javascript:void(0);" onclick="abrirZap('18997212541', 'Olá, vim pelo site!')">(18) 99721-2541</a>
-                    </div>
+                    </address>
                     
-                    <div class="contact-box">
-                        <i class="fas fa-phone-alt"></i>
+                    <address class="contact-box" style="font-style: normal;">
+                        <i class="fas fa-phone-alt" aria-hidden="true"></i>
                         <h4>Atendimento Secundário</h4>
                         <a href="javascript:void(0);" onclick="abrirZap('18997699734', 'Olá, vim pelo site!')">(18) 99769-9734</a>
-                    </div>
+                    </address>
 
                     <div class="contact-box">
-                        <i class="fas fa-map-marker-alt"></i>
+                        <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
                         <h4>Localização</h4>
                         <p>Presidente Prudente - SP<br><em>(Atendimento Nacional)</em></p>
                     </div>
 
                     <div class="contact-box">
-                        <i class="fas fa-truck-loading"></i>
+                        <i class="fas fa-truck-loading" aria-hidden="true"></i>
                         <h4>Versatilidade</h4>
                         <p>Entregamos o produto, fazemos apenas o frete ou vendemos direto para você.</p>
                     </div>
                 </div>
-            </div>
+            </section>
 
         </div>
     </main>
 
     <footer>
         <div class="container">
-            <p>&copy; 2026 Rodomacambira Transportes. Todos os direitos reservados. | Desenvolvido por <a href="https://www.devdigitalbr.com.br" target="_blank">Dev Digital BR</a></p>
+            <p>&copy; 2026 Rodomacambira Transportes. Todos os direitos reservados. | Desenvolvido por <a href="https://www.devdigitalbr.com.br" target="_blank" rel="noopener noreferrer">Dev Digital BR</a></p>
         </div>
     </footer>
 
@@ -368,7 +412,7 @@
         // Função do WhatsApp
         function abrirZap(numero, texto) {
             const url = `https://wa.me/55${numero}?text=${encodeURIComponent(texto)}`;
-            window.open(url, '_blank');
+            window.open(url, '_blank', 'noopener,noreferrer');
         }
 
         // Envio do Formulário
