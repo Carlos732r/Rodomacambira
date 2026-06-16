@@ -329,23 +329,19 @@
                     
                     <div class="form-group col-span-1">
                         <label for="form-servico">O que você precisa?</label>
-                        <select id="form-servico" required>
-                            <option value="" disabled selected>Selecione...</option>
-                            <option value="Apenas Frete (Transporte)">Apenas Frete</option>
-                            <option value="Comprar Insumo + Frete">Insumo + Frete</option>
-                            <option value="Apenas Comprar Insumo (Sem Frete)">Apenas Insumo</option>
+                        <select id="form-servico" required onchange="atualizarProdutos()">
+                            <option value="" disabled selected>Selecione o segmento...</option>
+                            <option value="Apenas Frete">Apenas Frete</option>
+                            <option value="Insumos Agrícolas e Cooperativas">Insumos Agrícolas e Cooperativas</option>
+                            <option value="Materiais de Construção">Materiais de Construção</option>
+                            <option value="Alimentos">Alimentos</option>
                         </select>
                     </div>
 
                     <div class="form-group col-span-1">
                         <label for="form-produto">Qual produto?</label>
-                        <select id="form-produto">
-                            <option value="Apenas frete">Frete</option>
-                            <option value="Areia">Areia</option>
-                            <option value="Pedra">Pedra</option>
-                            <option value="Calcário">Calcário</option>
-                            <option value="Adubo">Adubo</option>
-                            <option value="Concreto">Concreto</option>
+                        <select id="form-produto" required>
+                            <option value="" disabled selected>Selecione o segmento primeiro</option>
                         </select>
                     </div>
 
@@ -409,6 +405,34 @@
     </footer>
 
     <script>
+        // Objeto com os produtos separados por segmento
+        const produtosPorSegmento = {
+            "Apenas Frete": ["Apenas a mercadoria"],
+            "Insumos Agrícolas e Cooperativas": ["Calcário", "Adubo", "Ureia"],
+            "Materiais de Construção": ["Areia", "Pedra", "Cimento"],
+            "Alimentos": ["Congelados", "Secos", "Afins"]
+        };
+
+        // Função para atualizar o segundo select baseado no primeiro
+        function atualizarProdutos() {
+            const segmentoSelect = document.getElementById('form-servico');
+            const produtoSelect = document.getElementById('form-produto');
+            const segmentoSelecionado = segmentoSelect.value;
+
+            // Limpa as opções atuais do select de produtos
+            produtoSelect.innerHTML = '<option value="" disabled selected>Selecione o produto...</option>';
+
+            // Verifica se tem produtos para o segmento selecionado e os adiciona
+            if (segmentoSelecionado && produtosPorSegmento[segmentoSelecionado]) {
+                produtosPorSegmento[segmentoSelecionado].forEach(produto => {
+                    const option = document.createElement('option');
+                    option.value = produto;
+                    option.textContent = produto;
+                    produtoSelect.appendChild(option);
+                });
+            }
+        }
+
         // Função do WhatsApp
         function abrirZap(numero, texto) {
             const url = `https://wa.me/55${numero}?text=${encodeURIComponent(texto)}`;
@@ -426,8 +450,8 @@
 
             const mensagem = `*🚛 NOVA SOLICITAÇÃO - RODOMACAMBIRA*\n\n` +
                              `*Cliente:* ${nome}\n` +
-                             `*O que precisa:* ${servico}\n` +
-                             `*Produto:* ${produto}\n` +
+                             `*Segmento:* ${servico}\n` +
+                             `*Produto/Mercadoria:* ${produto}\n` +
                              `*Origem:* ${origem}\n` +
                              `*Destino:* ${destino}\n\n` +
                              `*Detalhes:* ${detalhes}\n\n` +
